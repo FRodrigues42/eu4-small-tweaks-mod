@@ -1,4 +1,5 @@
 # Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
 # If adding new buildings, make sure they are uniquely named.
 
 # cost = x #==> cost in $ to build (subject to other modifiers)
@@ -40,6 +41,49 @@ marketplace = {
 	}
 }
 
+##Roads stuff
+canal_system = {
+	cost = 170
+	time = 12
+	
+	build_trigger = {
+		FROM = {
+			adm_tech = 7
+		}
+	}
+	
+	modifier = {
+		trade_value_modifier = 0.1
+		local_development_cost = -0.05
+	}
+	
+	ai_will_do = {
+		factor = 1.2 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+	}
+}
+
+road_network = {
+	cost = 90
+	time = 12
+	
+	build_trigger = {
+		FROM = {
+			adm_tech = 3
+		}
+	}
+	
+	
+	modifier = {
+		local_friendly_movement_speed = 0.2
+		province_trade_power_modifier = 0.2
+		allowed_num_of_buildings = 1
+	}
+	
+	ai_will_do = {
+		factor = 1.2 
+	}
+}
+
 workshop = {
 	cost = 100
 	time = 12
@@ -51,6 +95,27 @@ workshop = {
 
 	ai_will_do = {
 		factor = 1
+		
+		modifier = {
+			factor = 1000
+			FROM = {
+				any_owned_province = { 
+					variable_arithmetic_trigger = {				
+						export_to_variable = {
+							variable_name = trade_goods_ai
+							value = modifier:trade_goods_size
+						}
+					
+						NOT = { has_building = workshop }
+						
+						check_variable = {
+							which = trade_goods_ai
+							value = 0.8
+						}
+					}
+				}
+			}	
+		}
 	}
 }
 
@@ -1025,6 +1090,8 @@ wharf = {
 		naval_supplies
 		fish
 		salt
+		seafood
+		tar
 	}
 	onmap = yes
 
@@ -1062,11 +1129,18 @@ weapons = {
 	manufactory = {
 		copper
 		iron
+		lead
+		mercury
+		tin
+		metalworking
+		munitions
+		zinc
+		cannon
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1076,11 +1150,13 @@ textile = {
 		cloth
 		silk
 		dyes
+		indigo
+		uniforms 
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1092,11 +1168,19 @@ plantations = {
 		tobacco
 		tea
 		cocoa
+		palm_oil
+		saffron
+		cinnamon
+		cloves
+		opium
+		dates
+		vanilla
+		nutmeg
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1105,14 +1189,29 @@ tradecompany = {
 		ivory
 		slaves
 		spices
-		cloves
 		fur
 		incense
+		whaling
+		beer
+		rum
+		jade
+		marble
+		gunpowder
+		cheese
+		carpet
+		exotic_animals
+		sulfur
+		leather
+		woodworking
+		jewellery
+		maple_syrup
+		sea_turtle
+		
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1121,6 +1220,18 @@ farm_estate = {
 		grain
 		livestock
 		wine
+		apiculture
+		rice
+		horses
+		olive_oil
+		camel
+		elephants
+		citrus
+		potato
+		maize
+		tomato
+		champagne
+		llama
 	}
 	onmap = yes
 
@@ -1133,14 +1244,20 @@ mills = {
 	manufactory = {
 		paper
 		gems
+		pearls
 		tropical_wood
 		glass
 		chinaware
+		lumber
+		ebony
+		amber
+		steam_engine
+		optics
 	}
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 }
 
@@ -1154,13 +1271,13 @@ furnace = {
 	}
 
 	modifier = {
-		global_trade_goods_size_modifier = 0.05 #National Bonus
+		global_trade_goods_size_modifier = 0.025 #National Bonus
 	}
 	onmap = yes
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 1
+		factor = 3
 	}
 }
 
@@ -1190,6 +1307,17 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		apiculture
+		rice
+		horses
+		olive_oil
+		camel
+		elephants
+		citrus
+		potato
+		maize
+		llama
+		champagne
 	}
 
 	modifier = {
@@ -1216,6 +1344,8 @@ impressment_offices = {
 		fish
 		naval_supplies
 		tropical_wood
+		seafood
+		tar
 	}
 
 	build_trigger = {
@@ -1250,6 +1380,8 @@ state_house = {
 		paper
 		glass
 		gems
+		amber
+		pearls
 	}
 
 	build_trigger = {
@@ -1294,6 +1426,17 @@ state_house = {
 
 	ai_will_do = {
 		factor = 1
+		
+		#Provinces in the Capital Area don't need a state_house
+		modifier = {
+			factor = 0
+			area_for_scope_province = {
+				any_province = {
+					area = PREV
+					is_capital_of = FROM
+				}
+			}
+		}
 	}
 }
 
