@@ -157,11 +157,7 @@ increase_the_gold_tax = {
 	}
 
 	modifier_overlord = {
-		global_tax_modifier = 0.05
-	}
-	
-	modifier_subject = {
-		global_tax_modifier = -0.05
+		treasure_fleet_income = 0.2
 	}
 }
 

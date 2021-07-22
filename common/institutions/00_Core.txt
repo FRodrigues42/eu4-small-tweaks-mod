@@ -1265,7 +1265,6 @@ global_trade = {
 	can_start = {
 		is_year = 1600
 		is_island = no
-		highest_value_trade_node = yes
 		OR = {
 			province_has_center_of_trade_of_level = 3
 			province_has_center_of_trade_of_level = 2
@@ -2436,7 +2435,12 @@ industrialization = {
 				}
 			}
 			OR = {
-				highest_value_trade_node = yes
+				owner = {
+					any_active_trade_node = {
+						is_strongest_trade_power = PREV
+						highest_value_trade_node = yes
+					}
+				}
 				is_year = 1760 #fallback
 			}
 		}
