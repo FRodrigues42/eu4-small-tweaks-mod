@@ -88,7 +88,6 @@ default = {
 	is_colony_subtype = no
 	is_march = no
 	forms_trade_companies = yes
-	can_concentrate_development = yes
 
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
@@ -286,7 +285,6 @@ daimyo_vassal = {
 	allows_taking_land_without_independence = yes
 	can_use_claims = no
 	forms_trade_companies = no
-	can_concentrate_development = no
 
 	trust_on_start = 0
 	
@@ -366,7 +364,6 @@ personal_union = {
 	can_have_subjects_of_other_types = yes
 	can_union_break = yes
 	transfer_subjects_when_made = yes
-	can_concentrate_development = no
 
 	liberty_desire_negative_prestige = 1.0
 	military_focus = 0.66
@@ -449,8 +446,6 @@ colony = {
 	overlord_enforce_peace_attacking = yes
 	can_transfer_in_peace = no
 	press_sailors = yes
-	transfer_trade_power = yes
-	can_concentrate_development = no
 	
 	liberty_desire_development_ratio = 0.1
 
@@ -500,7 +495,6 @@ crown_colony = {
 	upgrade_subject_type = yes
 	is_colony_subtype = yes
 	can_send_missionary_to_subject = yes	
-	count = colony
 
 	forcelimit_bonus = 1.0
 	forcelimit_to_overlord = 0.5
@@ -537,7 +531,6 @@ private_enterprise = {
 	change_colonial_type = yes
 	upgrade_subject_type = yes
 	is_colony_subtype = yes
-	count = colony
 
 	forcelimit_bonus = 0.0
 	forcelimit_to_overlord = 0.0
@@ -569,7 +562,6 @@ self_governing_colony = {
 	change_colonial_type = yes
 	upgrade_subject_type = yes
 	is_colony_subtype = yes
-	count = colony
 
 	forcelimit_bonus = 0.1
 	forcelimit_to_overlord = 0.05
@@ -581,6 +573,7 @@ self_governing_colony = {
 	sailors_to_overlord = 0.05
 
 	# Subject Interactions:
+	transfer_trade_power = no
 	replace_governor = no
 	block_settlement_growth = no
 	allow_settlement_growth = no
@@ -612,9 +605,22 @@ tributary_state = {
 		OR = {
 			has_reform = celestial_empire
 			is_nomad = yes
-			religion_group = eastern
-			technology_group = chinese
-			technology_group = polynesian_tech
+			NOT = {
+				OR = {
+					technology_group = western
+					technology_group = eastern
+					technology_group = ottoman
+					government = native
+					AND = {
+						OR = {
+							religion = nahuatl
+							religion = inti
+							religion = mesoamerican_religion
+						}
+						is_religion_reformed = no
+					}
+				}
+			}
 		}
 	}
 	
@@ -624,6 +630,7 @@ tributary_state = {
 	diplomacy_subject_sprite = GFX_diplomacy_amtributary
 
 	# Properties:
+	transfer_trade_power = no
 	can_fight_independence_war = no
 	joins_overlords_wars = no
 	joins_colonial_wars = no
@@ -645,7 +652,6 @@ tributary_state = {
 	can_send_missionary_to_subject = no
 	overlord_can_fabricate_for = no
 	does_overlord_size_count_for_warscore_cost = no
-	can_concentrate_development = no
 	
 	liberty_desire_development_ratio = 0.175
 	trust_on_start = 0
@@ -678,6 +684,7 @@ tributary_state = {
 	# (immediate)
 	enforce_religion = no
 	grant_core_claim = no
+	grant_province = no
 	bestow_gifts = yes
 	send_additional_troops = yes
 	demand_artifacts = yes

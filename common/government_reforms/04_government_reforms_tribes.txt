@@ -337,6 +337,9 @@ tribe_becomes_monarchy_reform = {
 			has_reform = stateless_society
 		}
 	}
+	trigger = {
+		has_institution = enlightenment
+	}
 	effect = {
 		set_country_flag = populists_in_government
 		lose_reforms = 4
@@ -384,6 +387,7 @@ tribe_becomes_republic_reform = {
 	icon = "parliament_highlighted"
 	allow_normal_conversion = yes
 	trigger = {
+		has_institution = enlightenment
 		NOT = { is_lesser_in_union = yes }
 	}
 	effect = {
@@ -459,6 +463,7 @@ tribe_becomes_theocracy_reform = {
 		}
 	}
 	trigger = {
+		has_institution = enlightenment
 		NOT = { is_lesser_in_union = yes }
 	}
 	effect = {
@@ -528,6 +533,7 @@ tribe_becomes_horde_reform = {
 		custom_tooltip = STEPPE_HORDE_BENEFITS
 	}
 	trigger = {
+		has_institution = enlightenment
 		OR = {
 			NOT = {	has_reform = steppe_horde }
 			has_reform = tribe_becomes_horde_reform
