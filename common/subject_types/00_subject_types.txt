@@ -401,6 +401,7 @@ client_vassal = {
 
 	# Properties:
 	created_by_overlord = yes
+	takes_diplo_slot = no
 
 	base_liberty_desire = -25.0
 	liberty_desire_revolution = 0
@@ -419,6 +420,7 @@ client_march = {
 
 	# Properties:
 	created_by_overlord = yes
+	takes_diplo_slot = no
 
 	base_liberty_desire = -40.0
 	liberty_desire_revolution = 0

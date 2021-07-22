@@ -324,10 +324,21 @@ native_trading_with_foreigners_reform = {
 	icon = "native_trading_with_foreigners_reform"
 	trigger = {
 		is_migratory_tribe = no
+		has_institution = global_trade
 		custom_trigger_tooltip = {
 			tooltip = "NEEDS_NATIVE_SPONSOR"
 			native_sponsor_scope = {
 				exists = yes
+				NOT = {
+					OR = {
+						technology_group = north_american
+						technology_group = mesoamerican
+						technology_group = south_american
+						technology_group = andean
+						technology_group = polynesian_tech
+						technology_group = aboriginal_tech
+					}
+				}
 			}
 		}
 	}
@@ -364,6 +375,9 @@ native_trading_with_foreigners_reform = {
 native_becomes_monarchy_reform = {
 	icon = "king_highlighted"
 	allow_normal_conversion = yes
+	trigger = {
+		has_institution = enlightenment
+	}
 	effect = {
 		every_tribal_land_province = {
 			limit = { NOT = { owner = { exists = yes } } }
@@ -381,6 +395,9 @@ native_becomes_monarchy_reform = {
 native_becomes_republic_reform = {
 	icon = "parliament_highlighted"
 	allow_normal_conversion = yes
+	trigger = {
+		has_institution = enlightenment
+	}
 	effect = {
 		every_tribal_land_province = {
 			limit = { NOT = { owner = { exists = yes } } }
@@ -413,6 +430,9 @@ native_becomes_republic_reform = {
 native_becomes_theocracy_reform = {
 	icon = "pope_highlighted"
 	allow_normal_conversion = yes
+	trigger = {
+		has_institution = enlightenment
+	}
 	effect = {
 		every_tribal_land_province = {
 			limit = { NOT = { owner = { exists = yes } } }
@@ -440,6 +460,7 @@ native_becomes_horde_reform = {
 	allow_normal_conversion = yes
 	trigger = {
 		is_migratory_tribe = yes
+		has_institution = enlightenment
 	}
 	effect = {
 		every_tribal_land_province = {

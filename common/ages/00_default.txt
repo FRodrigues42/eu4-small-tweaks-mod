@@ -97,7 +97,10 @@ age_of_discovery = {
 		obj_humiliate_rival = {
 			custom_trigger_tooltip = {
 				tooltip = obj_humiliate_rival_tooltip
-				has_country_flag = humiliated_rival
+				OR = {
+					has_country_flag = humiliated_rival
+					has_country_flag = mjl_age_humiliated_rival
+				}
 			}
 		}
 	}		
@@ -180,7 +183,10 @@ age_of_discovery = {
 		
 		ab_ottoman_siege_ability = {
 			allow = {
-				tag = TUR
+				OR = {
+					tag = TUR
+					tag = RUM
+				}
 			}
 			modifier = {
 				siege_ability = 0.33
@@ -273,7 +279,7 @@ age_of_reformation = {
 		}
 		
 		obj_colonial_empire = {
-			colony = 5
+			num_of_colonies = 5
 		}
 		
 		obj_force_converted = {
@@ -393,6 +399,7 @@ age_of_reformation = {
 		ab_spain_tercio = {
 			allow = {
 				tag = SPA
+				tag = ADU
 			}
 			modifier = {
 				shock_damage_received = -0.3
@@ -418,6 +425,7 @@ age_of_reformation = {
 				OR = {
 					tag = PLC
 					tag = POL
+					tag = LIT
 				}
 			}
 			modifier = {
@@ -488,8 +496,20 @@ age_of_absolutism = {
 		}
 		
 		obj_emperor_of_china = {
-			is_emperor_of_china = yes
-			imperial_mandate = 50
+			OR = {	
+				AND = {
+					is_emperor = yes
+					imperial_influence = 40
+				}
+				AND = {
+					government_rank = 3
+					grown_by_development = 1000
+				}
+				AND = {
+					is_emperor_of_china = yes
+					imperial_mandate = 50
+				}
+			}
 		}
 		
 		obj_cultures_accepted = {
@@ -522,10 +542,10 @@ age_of_absolutism = {
 
 		ab_rival_change = {
 			modifier = {
-				rival_change_cost = -0.5
+				embargo_efficiency = 0.25
 			}
 			ai_will_do = {
-				factor = 0
+				factor = 10
 			}
 		}
 
