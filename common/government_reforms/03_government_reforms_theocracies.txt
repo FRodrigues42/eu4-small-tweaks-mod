@@ -308,9 +308,9 @@ warrior_monks_reform = {
 	icon = "warrior_monks_reform"
 	allow_normal_conversion = yes
 	modifiers = {
-		discipline = 0.05
+		discipline = 0.025
 		infantry_power = 0.05
-		mercenary_manpower = 0.1
+		amount_of_banners = 0.05
 	}
 }
 
@@ -567,9 +567,9 @@ regionally_elected_commanders = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
 	}
 	ai = {
 		factor = 1
@@ -704,7 +704,7 @@ admiral_king_reform = {
 	}
 	modifiers = {
 		devotion = 0.1
-		naval_morale = 0.15
+		naval_morale = 0.05
 		leader_naval_fire = 1
 	}
 	custom_attributes = {
@@ -827,6 +827,12 @@ religious_permanent_revolution_reform = {
 		NOT = {
 			religion = confucianism
 			religion_group = pagan
+		}
+		if = {
+			limit = {
+				has_reform = crusade_against_the_world
+			}
+			85 = { NOT = { owned_by = ROOT } }
 		}
 	}
 	effect = {

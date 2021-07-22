@@ -32,6 +32,14 @@ monarchy = {
 				austrian_archduchy_reform
 				siamese_absolutism
 				confucian_bureaucracy
+				seljuk_empire_government
+				h_reform_warlord_1
+				h_reform_prefecture
+				h_reform_citystate
+				h_reform_warlord_2
+				h_reform_warlord_3
+				h_reform_warlord_4
+				h_reform_sinicized_horde
 			}
 		}
 		hereditary_vs_nobility = {
@@ -49,6 +57,7 @@ monarchy = {
 				legion_of_honor_reform
 				imperial_nobility_reform
 				uparaja_reform
+				african_colonists_reform
 			}
 		}
 		bureaucracy = {
@@ -261,6 +270,7 @@ republic = {
 				united_cantons_reform
 				kongsi_federation
 				millenarian_theocracy_reform
+				h_reform_commandery
 			}
 		}
 		republican_virtues = {
@@ -274,6 +284,7 @@ republic = {
 				liberte_reform
 				egalite_reform
 				fraternite_reform
+				african_colonists_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -421,18 +432,21 @@ tribal = {
 				stateless_society
 				polynesian_kingdom
 				polynesian_tribe
+				seljuk_empire_government
 			}
 		}
 		tribal_cultural_values = {
 			reforms = {
 				martial_society_reform
 				civil_society_reform
+				african_colonists_reform
 			}
 		}
 		tribal_religion = {
 			reforms = {
 				religious_societies_reform
 				lip_service_reform
+				mjl_altaic_herdsmen
 			}
 		}
 		tribal_modernization = {
@@ -526,6 +540,7 @@ theocracy = {
 				papacy_reform
 				holy_state_reform
 				united_cantons_reform
+				crusade_against_the_world
 			}
 		}
 		internal_vs_external_mission = {
@@ -534,6 +549,7 @@ theocracy = {
 				external_mission_reform
 				mission_to_civilize_reform
 				mission_to_kill_pirates_reform
+				african_colonists_reform
 			}
 		}
 		divine_cause = {
@@ -719,7 +735,7 @@ pre_dharma_mapping = {
 	}
 	trading_city = {
 		government = republic
-		legacy_government = imperial_city
+		legacy_government = imperial_city_legacy
 	}
 	ambrosian_republic = {
 		government = republic
@@ -790,6 +806,38 @@ pre_dharma_mapping = {
 		legacy_government = pirate_republic
 	}
 	all_mechanics = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_commandery = {
+		government = republic
+		legacy_government = oligarchic_republic
+	}
+	h_reform_prefecture = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_warlord_1 = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_citystate = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_warlord_2 = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_warlord_3 = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_warlord_4 = {
+		government = monarchy
+		legacy_government = despotic_monarchy
+	}
+	h_reform_sinicized_horde = {
 		government = monarchy
 		legacy_government = despotic_monarchy
 	}

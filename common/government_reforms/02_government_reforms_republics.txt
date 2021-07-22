@@ -52,7 +52,7 @@ oligarchy_reform = {
 signoria_reform = {
 	icon = "signoria_reform"
 	allow_normal_conversion = yes
-	duration = 12
+	duration = 4
 	legacy_equivalent = signoria
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -154,7 +154,7 @@ prussian_republic_reform = {
 		global_autonomy = -0.075
 		republican_tradition = -0.5
 		max_absolutism = -10
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.25
 	}
 	
 	conditional = {
@@ -989,15 +989,13 @@ federal_republic = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
+		blocked_call_diet = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
 	}
 	duration = 4
 }
@@ -1020,6 +1018,20 @@ colonial_government = {
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
 		governing_capacity = 100
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#COLONY DEBUFF
+		amount_of_banners = -0.3
+		global_trade_goods_size_modifier = -0.1
+		naval_morale = -0.1
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#All players privateer debuff
+		privateer_efficiency = -0.4
 	}
 
 	custom_attributes = {
@@ -1050,6 +1062,20 @@ crown_colony_government = {
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
 		governing_capacity = 100
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#COLONY DEBUFF
+		amount_of_banners = -0.3
+		global_trade_goods_size_modifier = -0.1
+		naval_morale = -0.1
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#All players privateer debuff
+		privateer_efficiency = -0.4
 	}
 
 	custom_attributes = {
@@ -1080,6 +1106,20 @@ private_enterprise_colony_government = {
 		embracement_cost = -0.1
 		merchants = 1
 		production_efficiency = 0.05
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#COLONY DEBUFF
+		amount_of_banners = -0.3
+		global_trade_goods_size_modifier = -0.1
+		naval_morale = -0.1
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#All players privateer debuff
+		privateer_efficiency = -0.4
 	}
 
 	custom_attributes = {
@@ -1107,9 +1147,22 @@ self_governing_colony_government = {
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
 		build_cost = -0.1
-		development_cost = -0.1
 		embracement_cost = -0.1
 		state_maintenance_modifier = -0.25
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#COLONY DEBUFF
+		amount_of_banners = -0.3
+		global_trade_goods_size_modifier = -0.1
+		naval_morale = -0.1
+
+		#Loyalty buff
+		liberty_desire = -30
+
+		#All players privateer debuff
+		privateer_efficiency = -0.4
 	}
 
 	custom_attributes = {
@@ -1146,7 +1199,7 @@ dutch_republic = {
 		heavy_ship_power = 0.1
 		trade_efficiency = 0.1
 		governing_capacity = 50
-		max_absolutism = -30
+		#max_absolutism = -30
 	}
 
 	removed_effect = {
@@ -1191,7 +1244,10 @@ cossacks_reform = {
 	potential = {
 		OR = {
 			AND = {
-				tag = ZAZ
+				OR = {
+					tag = ZAZ
+					tag = LIT
+				}
 				NOT = { map_setup = map_setup_random }
 			}
 			has_reform = cossacks_reform
@@ -1219,10 +1275,11 @@ cossacks_reform = {
 	nation_designer_cost = 60
 
 	modifiers = {
+		candidate_random_bonus = 2
 		cavalry_power = 0.2
 		cavalry_cost = -0.2
 		cav_to_inf_ratio = 0.2
-		governing_capacity = 50
+		governing_capacity = 150
 		max_absolutism = -40
 	}
 	duration = 4
@@ -1994,7 +2051,7 @@ admiralty_reform = {
 		is_revolutionary = no
 	}
 	trigger = {
-		full_idea_group = naval_ideas
+		full_idea_group = maritime_ideas
 		NOT = { has_reform = pirate_republic_reform }
 	}
 	modifiers = {

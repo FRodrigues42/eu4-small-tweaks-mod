@@ -78,13 +78,13 @@ plutocratic_reform = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
-	boost_income = yes
 	conditional = {
 		allow = {
 			has_dlc = "Leviathan"
 		}
 		allow_draft_transport_ships = yes
 	}
+	boost_income = yes
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -152,7 +152,7 @@ grand_duchy_reform = {
 		}
 	}
 	legacy_equivalent = despotic_monarchy
-	fixed_rank = 1
+	#fixed_rank = 1
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
@@ -271,7 +271,7 @@ indep_daimyo = {
 	icon = "samurai"
 	allow_normal_conversion = no
 	potential = {
-		NOT = { has_country_flag = formed_japan_flag }
+		#NOT = { has_country_flag = formed_japan_flag }
 		OR = {
 			AND = {
 				OR = {
@@ -298,9 +298,9 @@ indep_daimyo = {
 	maintain_dynasty = yes
 
 	modifiers = {
-		land_morale = 0.1
+		#land_morale = 0.1
 		infantry_power = 0.1
-		governing_capacity = -150
+		governing_capacity = -50
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -454,6 +454,7 @@ english_monarchy = {
 	legacy_equivalent = english_monarchy_legacy
 	start_territory_to_estates = 0.3
 	modifiers = {
+		monarch_military_power = 1
 		governing_capacity = 50
 		legitimacy = 0.5
 		global_unrest = -1
@@ -463,10 +464,6 @@ english_monarchy = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
 	}
 }
 
@@ -558,7 +555,7 @@ prussian_monarchy = {
 		max_absolutism = 10
 		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.25
 	}
 
 	conditional = {
@@ -634,7 +631,6 @@ tsardom = {
 	allow_normal_conversion = yes
 	potential = {
 		religion = orthodox
-		culture_group = east_slavic
 		OR = {
 			AND = {
 				tag = RUS
@@ -1417,8 +1413,8 @@ black_army_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		merc_maintenance_modifier = -0.15
-		mercenary_discipline = 0.025
+		land_maintenance_modifier = -0.05
+		amount_of_banners = 0.35
 		nobles_loyalty_modifier = -0.1
 	}
 	ai = {
@@ -1553,6 +1549,11 @@ examination_system_reform = {
 		OR = {
 			has_reform = confucian_bureaucracy
 			has_reform = celestial_empire
+			has_reform = h_reform_warlord_1
+			has_reform = h_reform_warlord_2
+			has_reform = h_reform_warlord_3
+			has_reform = h_reform_warlord_4
+			has_reform = h_reform_sinicized_horde
 		}
 	}
 	modifiers = {

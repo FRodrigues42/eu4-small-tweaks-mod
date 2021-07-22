@@ -4,7 +4,7 @@ united_cantons_reform = {
 	modifiers = {
 		governing_capacity = -50
 		free_policy = 1
-		mercenary_manpower = 0.5
+		amount_of_banners = 0.2
 		max_absolutism = -30
 	}
 	valid_for_nation_designer = yes
@@ -40,7 +40,7 @@ parliamentary_reform = {
 		global_unrest = -1
 	}
 	
-	trigger = {		
+	trigger = {
 		if = {
 			limit = { has_dlc = "Common Sense" }
 			OR = {
@@ -48,7 +48,7 @@ parliamentary_reform = {
 				crown_stronger_than_estate = { estate = estate_nobles }
 				has_reform = parliamentary_reform
 			}
-		}	
+		}
 		if = {
 			limit = { has_dlc = "Res Publica" }
 			NOT = { has_reform = elective_monarchy }
@@ -93,6 +93,10 @@ parliamentary_reform = {
 	}
 	post_removed_effect = {
 		give_estate_land_share_init = { estate = estate_nobles }
+	}
+
+	custom_attributes = {
+		blocked_call_diet = yes
 	}
 }
 
@@ -274,5 +278,39 @@ holy_state_reform = {
 	heirs_can_be_generals = yes
 	ai = {
 		factor = 10
+	}
+}
+
+
+
+
+african_colonists_reform = {
+	icon = "shaman"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			technology_group = sub_saharan
+			technology_group = east_african
+			technology_group = central_african
+		}
+	}
+	trigger = {
+		OR = {
+			technology_group = sub_saharan
+			technology_group = east_african
+			technology_group = central_african
+		}
+	}
+	lock_level_when_selected = no
+	effect = {
+		custom_tooltip = mjl_non_africa_province_gov_colonised_tt
+	}
+	modifiers = {
+		global_colonial_growth = 15
+		colonists = 1
+		global_manpower_modifier = 0.15
+	}
+	ai = {
+		factor = 0
 	}
 }

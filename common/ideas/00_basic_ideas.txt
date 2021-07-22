@@ -16,12 +16,8 @@ aristocracy_ideas = {
 	}
 
 	trigger = {
-		OR = {
-			has_government_attribute = enables_aristocratic_idea_group
-			government = tribal
-		}
-		NOT = { government = theocracy }
 		NOT = { has_reform = steppe_horde }
+		NOT = { has_idea = horse_lords }
 	}
 	
 	noble_knights = {
@@ -30,6 +26,7 @@ aristocracy_ideas = {
 	}
 	military_traditions = {
 		mil_tech_cost_modifier  = -0.1
+		cav_to_inf_ratio = 0.25
 	}
 	local_nobility = {
 		global_autonomy = -0.025
@@ -47,7 +44,7 @@ aristocracy_ideas = {
 		free_leader_pool = 1
 	}
 	noble_resilience = {
-		mercenary_manpower = 0.20
+		amount_of_banners = 0.15
 	}
 	
 
@@ -71,13 +68,12 @@ plutocracy_ideas = {
 		vaisyas_loyalty_modifier = 0.1
 	}
 
-	trigger = {
-		has_government_attribute = enables_plutocratic_idea_group
-	}
+	#trigger = {
+	#	has_government_attribute = enables_plutocratic_idea_group
+	#}
 
 	tradition_of_payment = {
-		mercenary_manpower = 0.10
-		mercenary_discipline = 0.025
+		fire_damage = 0.1
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
@@ -112,6 +108,7 @@ horde_gov_ideas = {
 	
 	trigger = {
 		has_reform = steppe_horde
+		NOT = { has_idea = noble_knights }
 	}
 	
 	horse_lords = {
@@ -193,7 +190,10 @@ indigenous_ideas = {
 	}
 
 	trigger = {
-		has_government_attribute = enables_natives_idea_group
+		OR = {
+			has_government_attribute = enables_natives_idea_group
+			primitives = yes
+		}
 	}
 
 	indigenous_bountiful_land = {
@@ -524,7 +524,7 @@ economic_ideas = {
 	category = ADM
 
 	bonus = {
-		development_cost = -0.2
+		development_cost = -0.1
 	}
 
 	bureaucracy = {
@@ -761,7 +761,8 @@ maritime_ideas = {
 	}
 
 	bonus = {
-		sea_repair = yes
+		#sea_repair = yes
+		naval_attrition = -0.6
 	}
 
 	merchant_traditions = {
@@ -983,19 +984,19 @@ administrative_ideas = {
 	}
 
 	organised_mercenary_payment = {
-		mercenary_cost = -0.10
+		global_regiment_cost = -0.05
 	}
 	adaptability = {
 		core_creation = -0.25
 	}
 	benefits_for_mercenaries = {
-		merc_maintenance_modifier = -0.15
+		land_maintenance_modifier = -0.05
 	}
 	bookkeeping = {
 		interest = -0.5
 	}
 	organised_mercenary_recruitment = {
-		mercenary_manpower = 0.25
+		amount_of_banners = 0.15
 	}
 	administrative_efficiency_idea = {
 		advisor_pool = 1
@@ -1106,7 +1107,7 @@ naval_ideas = {
 	category = MIL
 
 	trigger = {
-		primitives = no
+		always = no
 	}
 
 	bonus = {

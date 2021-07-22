@@ -1,30 +1,30 @@
 interaction = {
     key = sale_of_titles
     random_seed = crown_land_share
-	cooldown_months = 60
+	cooldown_months = 48
 
     trigger = {
         crown_land_share = 0.1
-        NOT = { num_of_rebel_armies = 1 }
-		NOT = { num_of_rebel_controlled_provinces = 1 }
+        #NOT = { num_of_rebel_armies = 1 }
+		#NOT = { num_of_rebel_controlled_provinces = 1 }
 		hidden_trigger = { has_any_estates = yes }
     }
     effect = {
-		if = {
+	 if = {
             limit = { current_age = age_of_discovery }
-            add_years_of_estate_land_income = 2.5
+            add_years_of_estate_land_income = 1.875
         }
         else_if = {
             limit = { current_age = age_of_reformation }
-            add_years_of_estate_land_income = 2.0
-        }
-        else_if = {
-            limit = { current_age = age_of_absolutism }
             add_years_of_estate_land_income = 1.5
         }
         else_if = {
+            limit = { current_age = age_of_absolutism }
+            add_years_of_estate_land_income = 1.125
+        }
+        else_if = {
             limit = { current_age = age_of_revolutions }
-            add_years_of_estate_land_income = 1.0
+            add_years_of_estate_land_income = 0.75
         }
         custom_tooltip = ESTATES_SALE_OF_TITLES_DESC
         give_estate_land_share_gigantic = { estate = all }
@@ -247,7 +247,7 @@ interaction = {
 			}
 			NOT = { has_estate_privilege = estate_church_statutory_rights }
 		}
-        is_at_war = no
+        #is_at_war = no
     }
     effect = {
         custom_tooltip = ESTATES_SEIZE_LAND_DESC
@@ -293,7 +293,7 @@ interaction = {
 				estate_influence = {
 					estate = all
 					influence = 1
-				}				
+				}
 			}
 			spawn_rebels_seize_land_switch = yes
 		}
