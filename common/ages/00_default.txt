@@ -268,6 +268,9 @@ age_of_reformation = {
 			OR = {
 				full_idea_group = humanist_ideas
 				full_idea_group = religious_ideas
+				full_idea_group = christian_idea_groups_expanded
+				full_idea_group = muslim_idea_groups_expanded
+				full_idea_group = confucian_idea_groups_expanded
 			}
 		}
 		
