@@ -124,6 +124,20 @@ country_event = { #Imperium Constantinopolitanum
 	option = {
 		name = FU_Aragon_Events.4.a 
 		
+		aegean_archipelago_area = {
+			limit = {
+				NOT = { is_core = FU1 }
+			}
+			add_core = FU1
+		}
+		hidden_effect = {
+			aegean_archipelago_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+				cede_province = FU1 
+			}
+		}
 		morea_area = {
 			limit = {
 				NOT = { is_core = FU1 }
