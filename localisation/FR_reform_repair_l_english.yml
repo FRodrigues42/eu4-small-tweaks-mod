@@ -1,5 +1,5 @@
-l_english:
-	# Events
+﻿l_english:
+  # Events
   FR_reform_repair_events.1.title: "Reform growth repair setup"
   FR_reform_repair_events.1.description: "This starts a hidden event that gives 1 reform progress to every country per 10% starting at 5%. So if you have 5% to 14% this is going to give 1 per year, if you have 15% to 24% this is going to give 2 per year (it's capped at 20 per year). To cancel select the cancel option and if you want to reinstate you need to wait for the annual events to clear."
   FR_reform_repair_events.1.option.init: "Start the annual reform progress events"
