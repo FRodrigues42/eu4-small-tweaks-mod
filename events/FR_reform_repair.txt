@@ -2,42 +2,79 @@ namespace = FR_reform_repair_events
 
 country_event = {
 	id = FR_reform_repair_events.1
-	title = FR_reform_repair_events.1.t
-	desc = FR_reform_repair_events.1.d
+	title = FR_reform_repair_events.1.title
+	desc = FR_reform_repair_events.1.description
 	
-	trigger = {
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = FR_reform_repair_events.1.a
-		ai_chance = { factor = 100 }
-		
+		name = FR_reform_repair_events.1.option.init
+		trigger = {
+			NOT = {
+				OR = {
+					has_global_flag = FR_reform_repair_events_annual
+					has_global_flag = FR_reform_repair_events_started
+				}
+			}
+		}
+
+		set_global_flag = FR_reform_repair_events_annual
 		every_country = {
 			country_event = {
 				id = FR_reform_repair_events.2
+				days = 1
 			}
 		}
 	}
 	
 	option = {
-		name = FR_reform_repair_events.1.exit
+		name = FR_reform_repair_events.1.option.remove
+		trigger = {
+			has_global_flag = FR_reform_repair_events_annual
+		}
+		clr_global_flag = FR_reform_repair_events_annual
+	}
+
+	option = {
+		name = FR_reform_repair_events.1.option.exit
 		ai_chance = { factor = 100 }
 	}
 }
 
 country_event = {
 	id = FR_reform_repair_events.2 
-	title = FR_reform_repair_events.2.t 
-	desc = FR_reform_repair_events.2.d
+	title = FR_reform_repair_events.2.title
+	desc = FR_reform_repair_events.2.description
+
+	# hidden = yes
 	
 	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
-			country_event = {
-				id = FR_reform_repair_events.2
-				days = 365
+			if = {
+				limit = {
+					has_global_flag = FR_reform_repair_events_annual
+				}
+
+				country_event = {
+					id = FR_reform_repair_events.2
+					days = 365
+				}
+				set_global_flag = FR_reform_repair_events_started
 			}
+			else_if = {
+				limit = {
+					has_global_flag = FR_reform_repair_events_started
+					ai = no
+				}
+
+				clr_global_flag = FR_reform_repair_events_started
+				country_event = {
+					id = FR_reform_repair_events.1
+				}
+			}
+
 			if = {
 				limit = {
 					has_global_modifier_value = {
@@ -222,7 +259,7 @@ country_event = {
 	}
 	
 	option = {
-		name = FR_reform_repair_events.2.a
+		name = FR_reform_repair_events.2.option.default
 		ai_chance = { factor = 100 }
 	}
 }

@@ -1,0 +1,38 @@
+country_decisions = {
+	FR_reform_repair_1 = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = { has_global_flag = FR_reform_repair_1 }
+		}
+		allow = {
+			ai = no
+			NOT = { has_global_flag = FR_reform_repair_1 }
+		}
+		effect = {
+			set_global_flag = FR_reform_repair_1
+			country_event = { id = FR_reform_repair_events.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	FR_reform_repair_2 = {
+		potential = {
+			ai = no
+			has_global_flag = FR_reform_repair_1
+		}
+		allow = {
+			ai = no
+			has_global_flag = FR_reform_repair_1
+		}
+		effect = {
+			clr_global_flag = FR_reform_repair_1
+			country_event = { id = FR_reform_repair_events.1 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
