@@ -46,7 +46,7 @@ country_event = {
 	title = FR_reform_repair_events.2.title
 	desc = FR_reform_repair_events.2.description
 
-	# hidden = yes
+	hidden = yes
 	
 	is_triggered_only = yes
 	
