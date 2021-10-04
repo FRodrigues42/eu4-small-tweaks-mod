@@ -17,4 +17,4 @@ dependencies={
 	"Peace Treaties Expanded"
 }
 name="FRodrigues' Small Tweaks"
-supported_version="1.31.5"
+supported_version="1.31.6"
