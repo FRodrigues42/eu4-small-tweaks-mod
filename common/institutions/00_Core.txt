@@ -1636,11 +1636,9 @@ manufactories = {
 		modifier = {
 			factor = 0.8
 			scale = yes
-			potential = {
+			potential = { #TGE 
 				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
+
 				}
 					
 				manufactories_origin = {
@@ -1657,9 +1655,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = copper
-					trade_goods = iron
+
 				}
+				
 				manufactories_origin = {
 					same_continent = PREV
 				}
@@ -1674,10 +1672,7 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
+
 				}
 				manufactories_origin = {
 					same_continent = PREV
@@ -1693,13 +1688,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
+
 				}
+				
 				manufactories_origin = {
 					same_continent = PREV
 				}
@@ -1714,17 +1705,15 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
+
 				}
+				
 				manufactories_origin = {
 					same_continent = PREV
 				}
+				
 			}
+						
 			custom_trigger_tooltip = {
 				tooltip = tooltip_tradecompany_on_institution_continent
 				has_building = tradecompany
@@ -1735,10 +1724,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
+
 				}
+				
 				manufactories_origin = {
 					same_continent = PREV
 				}
@@ -1753,12 +1741,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
+
 				}
+				
 				manufactories_origin = {
 					same_continent = PREV
 				}
@@ -1773,10 +1758,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
+
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -1791,9 +1775,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = copper
-					trade_goods = iron
+
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -1808,10 +1792,7 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
+
 				}
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
@@ -1827,13 +1808,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
+
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -1848,13 +1825,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
+
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -1869,10 +1842,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
+	
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -1887,12 +1859,9 @@ manufactories = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
+	
 				}
+				
 				manufactories_origin = {
 					NOT = { same_continent = PREV }
 				}
@@ -2435,12 +2404,7 @@ industrialization = {
 				}
 			}
 			OR = {
-				owner = {
-					any_active_trade_node = {
-						is_strongest_trade_power = PREV
-						highest_value_trade_node = yes
-					}
-				}
+				highest_value_trade_node = yes
 				is_year = 1760 #fallback
 			}
 		}
@@ -2640,9 +2604,6 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
 				}
 				industrialization_origin = {
 					same_continent = PREV
@@ -2657,10 +2618,6 @@ industrialization = {
 			factor = 0.3
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = copper
-					trade_goods = iron
-				}
 				industrialization_origin = {
 					same_continent = PREV
 				}
@@ -2674,12 +2631,6 @@ industrialization = {
 			factor = 0.3
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
-				}
 				industrialization_origin = {
 					same_continent = PREV
 				}
@@ -2693,14 +2644,6 @@ industrialization = {
 			factor = 0.15
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
-				}
 				industrialization_origin = {
 					same_continent = PREV
 				}
@@ -2714,14 +2657,6 @@ industrialization = {
 			factor = 0.15
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
-				}
 				industrialization_origin = {
 					same_continent = PREV
 				}
@@ -2735,11 +2670,6 @@ industrialization = {
 			factor = 0.2
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
-				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_farm_estate_on_institution_continent_industrialization
@@ -2753,13 +2683,7 @@ industrialization = {
 			factor = 0.15
 			scale = yes
 			potential = {
-				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
-				}
+
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_mills_on_institution_continent_industrialization
@@ -2774,9 +2698,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = naval_supplies
-					trade_goods = fish
-					trade_goods = salt
+
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2792,8 +2714,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = copper
-					trade_goods = iron
+
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2809,10 +2730,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = wool
-					trade_goods = cloth
-					trade_goods = silk
-					trade_goods = dyes
+
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2828,12 +2746,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = coffee
-					trade_goods = cotton
-					trade_goods = sugar
-					trade_goods = tobacco
-					trade_goods = tea
-					trade_goods = cocoa
+
 				}
 			}
 			custom_trigger_tooltip = {
@@ -2849,12 +2762,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = ivory
-					trade_goods = slaves
-					trade_goods = spices
-					trade_goods = cloves
-					trade_goods = fur
-					trade_goods = incense
+
 				}
 				industrialization_origin = {
 					NOT = { same_continent = PREV }
@@ -2870,9 +2778,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = grain
-					trade_goods = livestock
-					trade_goods = wine
+
 				}
 				industrialization_origin = {
 					NOT = { same_continent = PREV }
@@ -2888,11 +2794,7 @@ industrialization = {
 			scale = yes
 			potential = {
 				OR = {
-					trade_goods = paper
-					trade_goods = gems
-					trade_goods = tropical_wood
-					trade_goods = glass
-					trade_goods = chinaware
+
 				}
 				industrialization_origin = {
 					NOT = { same_continent = PREV }
