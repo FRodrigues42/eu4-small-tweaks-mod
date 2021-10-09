@@ -1,5 +1,6 @@
 # country
 # root = winning country, from = loser country
+#MJL Tweak to get the humiliated age bonus with Show strength peace term
 on_war_won = {
 	#MJL stuff
 	if = {
