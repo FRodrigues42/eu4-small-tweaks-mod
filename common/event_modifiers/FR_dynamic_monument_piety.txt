@@ -1,0 +1,78 @@
+# Double of monthly_piety of the monument and negates it
+# to negate the added piety of the monument
+
+# hagia_sophia
+
+hagia_sophia_2_dynamic_piety = {
+    monthly_piety = -0.002
+    religion = yes
+}
+
+hagia_sophia_2_3_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+hagia_sophia_3_dynamic_piety = {
+    monthly_piety = -0.004
+    religion = yes
+}
+
+# taj_mahal
+
+taj_mahal_1_dynamic_piety = {
+    monthly_piety = -0.002
+    religion = yes
+}
+
+taj_mahal_1_2_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+taj_mahal_2_dynamic_piety = {
+    monthly_piety = -0.004
+    religion = yes
+}
+
+taj_mahal_2_3_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+taj_mahal_3_dynamic_piety = {
+    monthly_piety = -0.006
+    religion = yes
+}
+
+# registan_square
+
+registan_square_1_dynamic_piety = {
+    monthly_piety = -0.002
+    religion = yes
+}
+
+registan_square_1_2_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+registan_square_2_dynamic_piety = {
+    monthly_piety = -0.004
+    religion = yes
+}
+
+registan_square_2_3_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+registan_square_3_dynamic_piety = {
+    monthly_piety = -0.006
+    religion = yes
+}

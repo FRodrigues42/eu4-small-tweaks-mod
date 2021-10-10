@@ -1,4 +1,4 @@
-namespace = FR_reform_repair_events 
+namespace = FR_reform_repair_events
 
 country_event = {
 	id = FR_reform_repair_events.1

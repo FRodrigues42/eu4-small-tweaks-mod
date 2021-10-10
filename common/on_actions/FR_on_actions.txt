@@ -12,6 +12,7 @@ on_war_won = {
 		}
 		set_country_flag = mjl_age_humiliated_rival
 	}
+
 	#Rest
 	FROM = { country_event = { id = flavor_cri.6 } }
 	ROOT = { country_event = { id = tributary_events.32 } }
@@ -88,3 +89,13 @@ on_war_won = {
 		}
 	}
 }
+
+# FR_dynamic_monument_piety
+on_great_project_constructed = {
+	country_event = {
+		id = FR_dynamic_monument_piety_events.1
+	}
+}
+
+# For now I'm not going to use on_province_owner_change to not get in conflits with TGE
+# on_province_owner_change = { ... }

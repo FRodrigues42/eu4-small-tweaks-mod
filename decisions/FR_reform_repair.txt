@@ -6,8 +6,6 @@ country_decisions = {
 			NOT = { has_global_flag = FR_reform_repair_1 }
 		}
 		allow = {
-			ai = no
-			NOT = { has_global_flag = FR_reform_repair_1 }
 		}
 		effect = {
 			set_global_flag = FR_reform_repair_1
@@ -24,8 +22,6 @@ country_decisions = {
 			has_global_flag = FR_reform_repair_1
 		}
 		allow = {
-			ai = no
-			has_global_flag = FR_reform_repair_1
 		}
 		effect = {
 			clr_global_flag = FR_reform_repair_1

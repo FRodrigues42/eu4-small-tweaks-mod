@@ -1,0 +1,75 @@
+country_decisions = {
+	FR_dynamic_monument_piety_1 = {
+		potential = {
+			ai = no
+			religion_group = muslim
+			NOT = { has_ruler_flag = FR_dynamic_monument_piety }
+			any_owned_province = {
+				OR = {
+					has_great_project = {
+						type = hagia_sophia
+					}
+					has_great_project = {
+						type = taj_mahal
+					}
+					has_great_project = {
+						type = registan_square
+					}
+				}
+			}
+		}
+		allow = {
+			any_owned_province = {
+				OR = {
+					has_great_project = {
+						type = hagia_sophia
+						tier = 1
+					}
+					has_great_project = {
+						type = hagia_sophia
+						tier = 2
+					}
+					has_great_project = {
+						type = hagia_sophia
+						tier = 3
+					}
+					has_great_project = {
+						type = taj_mahal
+						tier = 1
+					}
+					has_great_project = {
+						type = taj_mahal
+						tier = 2
+					}
+					has_great_project = {
+						type = taj_mahal
+						tier = 3
+					}
+					has_great_project = {
+						type = registan_square
+						tier = 1
+					}
+					has_great_project = {
+						type = registan_square
+						tier = 2
+					}
+					has_great_project = {
+						type = registan_square
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_ruler_flag = "FR_dynamic_monument_piety"
+				country_event = { id = FR_dynamic_monument_piety_events.1 }
+			}
+
+			custom_tooltip = FR_dynamic_monument_piety_1_effect_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

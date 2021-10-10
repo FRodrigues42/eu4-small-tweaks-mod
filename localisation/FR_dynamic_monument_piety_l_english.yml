@@ -1,0 +1,25 @@
+﻿l_english:
+  # Events
+  FR_dynamic_monument_piety_events.1.option.a: "Ok"
+
+  # Decisions
+  FR_dynamic_monument_piety_1_title: "Proclaim the monuments' art"
+  FR_dynamic_monument_piety_1_desc: "Announce the various monuments as an artistic endeavor."
+
+  # Tooltip
+  FR_dynamic_monument_piety_1_effect_tt: "Turns all the monuments' monthly piety gain into negative."
+
+  # Modifiers
+  hagia_sophia_2_dynamic_piety: "Proclaimed Hagia Sophia's art tier 2"
+  hagia_sophia_2_3_dynamic_piety: "Proclaimed Hagia Sophia's art tier 3"
+  hagia_sophia_3_dynamic_piety: "Proclaimed Hagia Sophia's art tier 3"
+  taj_mahal_1_dynamic_piety: "Proclaimed Taj Mahal's art tier 1"
+  taj_mahal_1_2_dynamic_piety: "Proclaimed Taj Mahal's art tier 2"
+  taj_mahal_2_dynamic_piety: "Proclaimed Taj Mahal's art tier 2"
+  taj_mahal_2_3_dynamic_piety: "Proclaimed Taj Mahal's art tier 3"
+  taj_mahal_3_dynamic_piety: "Proclaimed Taj Mahal's art tier 3"
+  registan_square_1_dynamic_piety: "Proclaimed Registan Square's art tier 1"
+  registan_square_1_2_dynamic_piety: "Proclaimed Registan Square's art tier 2"
+  registan_square_2_dynamic_piety: "Proclaimed Registan Square's art tier 2"
+  registan_square_2_3_dynamic_piety: "Proclaimed Registan Square's art tier 3"
+  registan_square_3_dynamic_piety: "Proclaimed Registan Square's art tier 3"
