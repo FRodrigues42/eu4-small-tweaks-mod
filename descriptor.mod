@@ -1,4 +1,4 @@
-version="31.6.6"
+version="31.6.7"
 tags={
 	"Balance"
 	"National Ideas"
