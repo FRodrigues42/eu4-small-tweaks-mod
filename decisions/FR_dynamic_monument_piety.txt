@@ -15,6 +15,12 @@ country_decisions = {
 					has_great_project = {
 						type = registan_square
 					}
+					has_great_project = {
+						type = holy_city_kairouan
+					}
+					has_great_project = {
+						type = imam_hussein_al-abbas
+					}
 				}
 			}
 		}
@@ -55,6 +61,30 @@ country_decisions = {
 					}
 					has_great_project = {
 						type = registan_square
+						tier = 3
+					}
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 1
+					}
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 2
+					}
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 3
+					}
+					has_great_project = {
+						type = imam_hussein_al-abbas
+						tier = 1
+					}
+					has_great_project = {
+						type = imam_hussein_al-abbas
+						tier = 2
+					}
+					has_great_project = {
+						type = imam_hussein_al-abbas
 						tier = 3
 					}
 				}

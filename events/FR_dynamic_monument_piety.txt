@@ -212,6 +212,161 @@ country_event = {
 				}
 			}
 		}
+
+		# has holy_city_kairouan
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 1
+					}
+				}
+			}
+
+			add_ruler_modifier = {
+				name = "holy_city_kairouan_1_dynamic_piety"
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 2
+					}
+				}
+			}
+
+			if = {
+				# When a ruler constructs the tier 1
+				limit = {
+					has_ruler_modifier = holy_city_kairouan_1_dynamic_piety
+				}
+
+				add_ruler_modifier = {
+					name = "holy_city_kairouan_1_2_dynamic_piety"
+					duration = -1
+				}
+			}
+			else = {
+				add_ruler_modifier = {
+					name = "holy_city_kairouan_2_dynamic_piety"
+					duration = -1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = holy_city_kairouan
+						tier = 3
+					}
+				}
+			}
+
+			if = {
+				# When a ruler constructs the tier 2
+				limit = {
+					OR = {
+						has_ruler_modifier = holy_city_kairouan_2_dynamic_piety
+						has_ruler_modifier = holy_city_kairouan_1_2_dynamic_piety
+					}
+				}
+
+				add_ruler_modifier = {
+					name = "holy_city_kairouan_2_3_dynamic_piety"
+					duration = -1
+				}
+			}
+			else = {
+				add_ruler_modifier = {
+					name = "holy_city_kairouan_3_dynamic_piety"
+					duration = -1
+				}
+			}
+		}
+
+		# has imam_hussein_al-abbas
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = imam_hussein_al-abbas
+						tier = 1
+					}
+				}
+			}
+
+			add_ruler_modifier = {
+				name = "imam_hussein_al-abbas_1_dynamic_piety"
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = imam_hussein_al-abbas
+						tier = 2
+					}
+				}
+			}
+
+			if = {
+				# When a ruler constructs the tier 1
+				limit = {
+					has_ruler_modifier = imam_hussein_al-abbas_1_dynamic_piety
+				}
+
+				add_ruler_modifier = {
+					name = "imam_hussein_al-abbas_1_2_dynamic_piety"
+					duration = -1
+				}
+			}
+			else = {
+				add_ruler_modifier = {
+					name = "imam_hussein_al-abbas_2_dynamic_piety"
+					duration = -1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_great_project = {
+						type = imam_hussein_al-abbas
+						tier = 3
+					}
+				}
+			}
+
+			if = {
+				# When a ruler constructs the tier 2
+				limit = {
+					OR = {
+						has_ruler_modifier = imam_hussein_al-abbas_2_dynamic_piety
+						has_ruler_modifier = imam_hussein_al-abbas_1_2_dynamic_piety
+					}
+				}
+
+				add_ruler_modifier = {
+					name = "imam_hussein_al-abbas_2_3_dynamic_piety"
+					duration = -1
+				}
+			}
+			else = {
+				add_ruler_modifier = {
+					name = "imam_hussein_al-abbas_3_dynamic_piety"
+					duration = -1
+				}
+			}
+		}
+
 	}
 
 	option = {

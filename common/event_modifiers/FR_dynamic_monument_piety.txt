@@ -76,3 +76,61 @@ registan_square_3_dynamic_piety = {
     monthly_piety = -0.006
     religion = yes
 }
+
+# holy_city_kairouan
+
+holy_city_kairouan_1_dynamic_piety = {
+    monthly_piety = -0.002
+    religion = yes
+}
+
+holy_city_kairouan_1_2_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+holy_city_kairouan_2_dynamic_piety = {
+    monthly_piety = -0.004
+    religion = yes
+}
+
+holy_city_kairouan_2_3_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+holy_city_kairouan_3_dynamic_piety = {
+    monthly_piety = -0.006
+    religion = yes
+}
+
+# imam_hussein_al-abbas
+
+imam_hussein_al-abbas_1_dynamic_piety = {
+    monthly_piety = -0.002
+    religion = yes
+}
+
+imam_hussein_al-abbas_1_2_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+imam_hussein_al-abbas_2_dynamic_piety = {
+    monthly_piety = -0.004
+    religion = yes
+}
+
+imam_hussein_al-abbas_2_3_dynamic_piety = {
+    # Double the difference of the monthly_piety of tier 3 from tier 2
+    monthly_piety = -0.002
+    religion = yes
+}
+
+imam_hussein_al-abbas_3_dynamic_piety = {
+    monthly_piety = -0.006
+    religion = yes
+}
