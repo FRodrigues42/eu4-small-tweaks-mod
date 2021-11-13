@@ -16,3 +16,4 @@ dependencies={
 }
 name="FRodrigues' Small Tweaks"
 supported_version="1.32.*"
+remote_file_id="2652934606"
