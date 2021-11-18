@@ -1,4 +1,4 @@
-version="32.7.2"
+version="32.8.0"
 tags={
 	"Balance"
 	"Fixes"
