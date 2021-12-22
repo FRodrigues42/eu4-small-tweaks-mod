@@ -1261,7 +1261,6 @@ global_trade = {
 		
 		OR = {
 			province_has_center_of_trade_of_level = 3
-			province_has_center_of_trade_of_level = 2
 			is_capital = yes
 			AND = {
 				is_year = 1630 #fallback
