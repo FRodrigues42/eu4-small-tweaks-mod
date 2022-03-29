@@ -108,10 +108,7 @@ age_of_discovery = {
 		obj_humiliate_rival = {
 			custom_trigger_tooltip = {
 				tooltip = obj_humiliate_rival_tooltip
-				OR = {
-					has_country_flag = humiliated_rival
-					has_country_flag = mjl_age_humiliated_rival
-				}
+				has_country_flag = humiliated_rival
 			}
 		}
 
@@ -142,9 +139,9 @@ age_of_discovery = {
 			}
 		}
 		ase_dynamic_court = {
-			has_adm_advisor = yes
-			has_dip_advisor = yes
-			has_mil_advisor = yes
+			employed_advisor = { category = ADM }
+			employed_advisor = { category = DIP }
+			employed_advisor = { category = MIL }
 		}
 	}
 	
@@ -304,6 +301,42 @@ age_of_discovery = {
 			}
 		}
 
+		ase_aragon_consulate_sea = {
+			allow = {
+				tag = ARA
+			}
+			modifier = {
+				global_prov_trade_power_modifier = 0.50
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ase_castile_inquisition = {
+			allow = {
+				tag = CAS
+			}
+			modifier = {
+				global_heathen_missionary_strength = 0.03
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ase_cusco_inca_qhapaq_nan = {
+			allow = {
+				OR = {
+					tag = CSU
+					tag = INC
+				}
+			}
+			modifier = {
+				movement_speed = 0.15
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 		ase_delhi_hindustani_claims = {
 			allow = {
 				tag = DLH
@@ -464,7 +497,7 @@ age_of_reformation = {
 				}
 			}
 			else = {
-				num_of_colonies = 5
+				colony = 5
 			}
 		}
 		obj_force_converted = {
@@ -911,8 +944,23 @@ age_of_absolutism = {
 			}
 		}
 		ase_imperial_control = {
+			allow = {
+				NOT = { has_age_ability = ase_centralised_state }
+			}
 			modifier = {
 				min_autonomy_in_territories = -0.20
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ase_centralised_state = {
+			allow = {
+				NOT = { has_age_ability = ase_imperial_control }
+			}
+			effect = {
+				custom_tooltip = ase_centralised_state_tt
+				set_country_flag = centralised_state_flag
 			}
 			ai_will_do = {
 				factor = 100
@@ -970,12 +1018,25 @@ age_of_absolutism = {
 			}
 		}
 
+		ase_ayutthaya_venice_east = {
+			allow = {
+				tag = AYU
+			}
+			modifier = {
+				global_trade_power = 0.25
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 		ase_japan_prosperity = {
 			allow = {
 				tag = JAP
 			}
 			modifier = {
-				development_cost = -0.15
+				development_cost = -0.05
+				global_prosperity_growth = 1
+				global_monthly_devastation = -0.10
 			}
 			ai_will_do = {
 				factor = 100
@@ -1190,6 +1251,7 @@ age_of_revolutions = {
 			allow = {
 				OR = {
 					tag = PRU
+					tag = GER
 					was_tag = PRU
 				}
 			}
